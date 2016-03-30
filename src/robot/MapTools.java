@@ -10,7 +10,7 @@ public class MapTools {
 	            return new Coordinates(position.getX(), position.getY() - 1);
 	        if (direction == EAST)
 	            return new Coordinates(position.getX() + 1, position.getY());
-	        return new Coordinates(position.getX() + 1, position.getY());
+	        return new Coordinates(position.getX() - 1, position.getY());
 	    }
 
 	 static Coordinates nextBackwardPosition(Coordinates position, Direction direction) {
@@ -27,13 +27,13 @@ public class MapTools {
 	        if (direction == NORTH) return WEST;
 	        if (direction == WEST) return SOUTH;
 	        if (direction == SOUTH) return EAST;
-	        return SOUTH;
+	        return NORTH;
 	    }
 
 	    static Direction clockwise(Direction direction) {
 	        if (direction == NORTH) return EAST;
 	        if (direction == EAST) return SOUTH;
-	        if (direction == SOUTH) return EAST;
+	        if (direction == SOUTH) return WEST;
 	        return NORTH;
 	    }
 }

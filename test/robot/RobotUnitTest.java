@@ -20,7 +20,7 @@ public class RobotUnitTest {
         assertEquals(0, robot.getYposition());
     }
 
-    @Test
+    @Test (expected=UnlandedRobotException.class)
     public void testRobotMustBeLandedBeforeAnyMove() throws Exception {
         Robot robot = new Robot();
         robot.moveForward();

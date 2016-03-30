@@ -48,12 +48,12 @@ public class Robot {
 
     public void moveForward() throws UnlandedRobotException {
         if (!isLanded) throw new UnlandedRobotException();
-        MapTools.nextForwardPosition(position, direction);
+       this.position = MapTools.nextForwardPosition(position, direction);
     }
 
     public void moveBackward() throws UnlandedRobotException {
         if (!isLanded) throw new UnlandedRobotException();
-        MapTools.nextForwardPosition(position, direction);
+        this.position = MapTools.nextBackwardPosition(position, direction);
     }
 
     public void turnLeft() throws UnlandedRobotException {
@@ -75,7 +75,7 @@ public class Robot {
             Instruction nextInstruction = roadBook.next();
             if (nextInstruction == FORWARD) moveForward();
             else if (nextInstruction == BACKWARD) moveBackward();
-            else if (nextInstruction == TURNLEFT) turnRight();
+            else if (nextInstruction == TURNLEFT) turnLeft();
             else if (nextInstruction == TURNRIGHT) turnRight();
         }
     }
