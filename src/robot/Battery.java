@@ -48,7 +48,7 @@ public class Battery {
      */
     public void use(double energy) throws InsufficientChargeException {
         if (chargeLevel < energy) throw new InsufficientChargeException();
-        chargeLevel = (float) energy;
+        chargeLevel -= (float) energy;
     }
     
  /**
