@@ -4,7 +4,11 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
-
+/***
+ * Classe de test de la classe Battery
+ * @author LETOURNEUR - GERLAND
+ *
+ */
 public class BatteryUnitTest {
 
 	/**

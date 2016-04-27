@@ -2,6 +2,11 @@ package robot;
 
 import java.util.Random;
 
+/***
+ * Classe du capteur de distance et de consommation d'énergie entre le position
+ * @author LETOURNEUR - GERLAND
+ *
+ */
 public class LandSensor {
 	
 	private Random random ;
@@ -28,6 +33,9 @@ public class LandSensor {
     }
 
     public double distance(Coordinates coordinate1, Coordinates coordinate2) {
-        return Math.sqrt(Math.pow(coordinate1.getX()-coordinate2.getX(), 2) + Math.pow(coordinate1.getY()-coordinate2.getY(),2));
+        return Math.sqrt(
+        			Math.pow(coordinate1.getX()-coordinate2.getX(), 2) 
+        			+ Math.pow(coordinate1.getY()-coordinate2.getY(),2)
+        		);
     }
 }

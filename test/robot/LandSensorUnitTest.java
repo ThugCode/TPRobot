@@ -6,6 +6,11 @@ import java.util.Random;
 
 import org.junit.Test;
 
+/***
+ * Classe de test de la classe LandSensor
+ * @author LETOURNEUR - GERLAND
+ *
+ */
 public class LandSensorUnitTest {
 
 	/**
